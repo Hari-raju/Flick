@@ -1,0 +1,25 @@
+package com.raju.flick.utils
+
+
+
+const val KEY_COLLECTION_USERS:String ="users"
+const val KEY_USER:String = "user"
+const val KEY_EMAIL:String = "email"
+const val KEY_PASS:String = "password"
+const val KEY_USER_NAME:String = "username"
+const val KEY_IMAGE:String = "image"
+const val KEY_IS_USER_SIGNED_IN:String="isSignedIn"
+const val KEY_USER_ID="userId"
+const val KEY_PREFERENCE_NAME="flickPreference"
+const val KEY_NAME="name"
+const val KEY_BIO="bio"
+const val KEY_POST_FOLDER="postImages"
+const val KEY_FOLLOWERS="followers"
+const val KEY_FOLLOWING="following"
+const val KEY_POSTS="posts"
+const val KEY_USER_POSTS="user_posts"
+const val KEY_PHOTOS="photo"
+const val KEY_USER_POST_HOLDER="post_folder"
+const val KEY_LIKES="likes"
+const val KEY_LIKES_COUNT="likesCount"
+const val KEY_COMMENTS="comments"

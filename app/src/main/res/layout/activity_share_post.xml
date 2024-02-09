@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SharePostActivity"
+    tools:ignore="contentDescription">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/share_appBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/baseline_close_24"
+            android:id="@+id/share_close"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            style="@style/imageColor"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/new_post"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_16ssp"
+            android:layout_marginStart="@dimen/_20sdp"/>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textColors"
+            android:text="@string/next"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/myPrimary"
+            android:textSize="@dimen/_12ssp"
+            android:id="@+id/share_next"
+            android:layout_gravity="end"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/share_appBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:weightSum="6">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/share_selected_post"
+                android:scaleType="centerCrop"
+
+                />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:background="@android:color/transparent">
+
+            <Spinner
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/share_spinner"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_camera_alt_24"
+                android:layout_gravity="center"
+                android:id="@+id/share_camera"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                style="@style/imageColor"/>
+
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/share_grid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="2.5"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:numColumns="4"
+            android:horizontalSpacing="1dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="1dp"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

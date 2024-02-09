@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="developed_by">Developed by</string>
+    <string name="dev_name">Raju</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="already_have_an_account">Already have an account? <font color='#01C6DB'>Login</font></string>
+    <string name="add_profile">Add Profile</string>
+    <string name="skip">Skip</string>
+    <string name="upload_your_picture">Upload your picture</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="log_in">LOG IN</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="enter_your_password_again">Enter your password again</string>
+    <string name="done">DONE</string>
+    <string name="_0">0</string>
+    <string name="posts">Posts</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="share_profile">Share Profile</string>
+    <string name="name">Name</string>
+    <string name="create">Create</string>
+    <string name="edit_picture">Edit Picture</string>
+    <string name="update">Update</string>
+    <string name="bio">Enter your Bio</string>
+    <string name="user_post_format">%s %s</string>
+    <string name="just_now">Just now</string>
+    <string name="message">Message</string>
+    <string name="add_post">Add Post</string>
+    <string name="add_video">Add Video</string>
+    <string name="new_post">New Post</string>
+    <string name="logout">Logout</string>
+    <string name="details">Details</string>
+    <string name="enter_caption_for_your_post">Enter caption for your post!</string>
+    <string name="post">Post</string>
+    <string name="liked_by_others">Liked by others</string>
+    <string name="raju_1_x_beaautiful_world">raju_1.x Beaautiful world</string>
+    <string name="view_all_comments">View all comments</string>
+    <string name="_5_minutes_ago">5 minutes ago</string>
+    <string name="comments">Comments</string>
+    <string name="add_a_comment">Add a Comment</string>
+</resources>

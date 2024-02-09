@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileActivity">
+
+    <ImageView
+        android:id="@+id/back_profile"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="@android:color/transparent"
+        android:clickable="true"
+        android:contentDescription="back"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/myPrimary"
+        tools:ignore="HardcodedText" />
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/profile_profile"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@drawable/profile_bg"
+        android:elevation="@dimen/_10sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_profile"
+        app:layout_constraintBottom_toTopOf="@id/container_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_oval="true" />
+
+
+    <ImageView
+        android:id="@+id/addProfile_profile"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:elevation="@dimen/_20sdp"
+        android:src="@drawable/add"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_profile"
+        app:layout_constraintEnd_toEndOf="@+id/profile_profile"
+        app:layout_constraintHorizontal_bias="0.85"
+        android:background="@drawable/add_button_bg"
+        app:layout_constraintStart_toStartOf="@+id/profile_profile"
+        app:layout_constraintTop_toTopOf="@+id/profile_profile"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="contentDescription" />
+
+    <TextView
+        android:id="@+id/desc_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/upload_your_picture"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/profile_profile"
+        app:layout_constraintStart_toStartOf="@id/profile_profile"
+        app:layout_constraintTop_toBottomOf="@id/profile_profile" />
+
+
+    <LinearLayout
+        android:id="@+id/container_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_name"
+            app:endIconMode="clear_text"
+            android:hint="@string/name"
+            app:boxStrokeWidthFocused="@dimen/_2sdp"
+            app:boxBackgroundColor="@android:color/transparent"
+            android:background="@android:color/transparent"
+            style="@style/Base.Theme.Flick"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:elevation="@dimen/_10sdp"
+            app:boxStrokeColor="@color/myPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:maxLines="1"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            style="@style/Base.Theme.Flick"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@android:color/transparent"
+            android:elevation="@dimen/_10sdp"
+            android:hint="@string/bio"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:boxStrokeColor="@color/myPrimary"
+            app:boxStrokeWidthFocused="@dimen/_2sdp"
+            app:endIconMode="clear_text"
+            android:id="@+id/profile_bio">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:inputType="text"
+                android:maxLines="3" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/done_profile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:backgroundTint="@color/myPrimary"
+                android:clickable="true"
+                android:elevation="@dimen/_20sdp"
+                android:focusable="true"
+                android:text="@string/create"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/_8sdp" />
+
+            <ProgressBar
+                android:id="@+id/progress_profile"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/myPrimary"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame"/>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/myPrimary"
+        android:layout_gravity="bottom"
+        android:id="@+id/bottomAppBar"
+        android:backgroundTint="@color/myPrimary"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        app:fabAlignmentMode="center"
+        app:fabCradleMargin="@dimen/_10sdp"
+        app:fabCradleRoundedCornerRadius="@dimen/_40sdp">
+        
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_menu"
+            app:labelVisibilityMode="unlabeled"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:itemActiveIndicatorStyle="@android:color/transparent"
+            app:itemIconTint="@drawable/bottom_bar_item_selector"
+            android:id="@+id/bottomNav"/>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_fab"
+        app:layout_anchor="@id/bottomAppBar"
+        app:shapeAppearance="@style/ThemeOverlay.Material3.FloatingActionButton.Primary"
+        android:backgroundTint="@color/myPrimary"
+        app:tint="@color/white"
+        android:src="@drawable/baseline_add_24"
+        android:contentDescription="button"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
